@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-4" style="border:1px solid #21B6A8; margin-top: 2px; margin-bottom:2px; border-radius: 15px">
+    <div id="user-details">
+      <h1>@<%= current_user.full_name %></h1>
+      <div class="row">
+        <div class="col-sm-6">
+          <span style="color:green">Following: 0</span>
+        </div>
+        <div class="col-sm-6">
+          <span style="color:green">Followers: 0</span>
+        </div>
+      </div>
+    </div>
+    <%= form_for @post, :url => url_for(:controller => 'posts', :action => 'create') do |f| %>
+      <div class="form-group">
+        <%= f.text_area :content, class: 'form-control', placeholder: 'Post something on your mind.', :cols => 5, :rows => 5 %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Post", class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-8">
+    <h3>Your Posts</h3>
+    <div id="post-content">
+      <% @posts.each do |post| %>
+        <div style="border: 1px solid #21B6A8; margin: 2px; padding: 2px">
+          <h6>Content: <%= post.content %></h6>
+          <span style="color:grey">Written By: <%= post.user.full_name %></span><br />
+          <span style="color:grey"><%= post.created_at.to_formatted_s(:short) %></span>
+          <% if can? :update, post %>
+            <%= link_to 'Edit', edit_post_path(post) %>
+          <% end %>
+          <% if can? :delete, post %>
+            <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
