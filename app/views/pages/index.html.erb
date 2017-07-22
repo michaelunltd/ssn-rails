@@ -1,52 +1,20 @@
-  <!-- <div class="container col-md-8 col-md-2-offset">
-    <div class="jumbotron">
-      <h1>Welcome!</h1>
-      <p>
-        Register to get started.
-      </p>
-      <p>
-        <%= link_to 'Register', new_user_registration_path, class: 'btn btn-primary btn-lg' %>
-      </p>
-    </div>
-	</div> -->
-	<div class="d-flex align-items-center" style="height:60vh">
-		<div class="container col-md-6 col-md-3-offset" style="text-align: center;margin: auto;border: 0.5px solid #c6c6c6;border-radius: 10px;padding: 25px;">
-			<ul class="nav nav-tabs nav-fill">
-				<li class="nav-item">
-					<a class="nav-link active" role="tab" href="#login" data-toggle="tab">Log in</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" role="tab" href="#signup" data-toggle="tab">Sign up</a>
-				</li>
-			</ul>
-			<div class="tab-content" style="padding-top: 5px">
-				<div role="tabpanel" class="tab-pane active" id="login">
-					<form>
-						<div class="form-group row">
-							<label class="col-2 col-form-label">Email</label>
-							<div class="col-10">
-								<input type="email" class="form-control" name="username" />
-							</div>
-						</div>
-						<div class="form-group row">
-							<label class="col-2 col-form-label">Password</label>
-							<div class="col-10">
-								<input type="password" class="form-control" name="password" />
-							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-8">
-
-							</div>
-							<div class="col-4">
-								<input type="submit"  class="form-control btn btn-secondary float-right"/>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div role="tabpanel" class="tab-pane" id="signup">
-					<h3>Notice the gap between the content and tab after applying a background color</h3>
-				</div>
+<div class="d-flex align-items-center" style="height:60vh">
+	<div class="container col-md-6 col-md-3-offset" style="text-align: center;margin: auto;border: 0.5px solid #c6c6c6;border-radius: 10px;padding: 25px;">
+		<ul class="nav nav-tabs nav-fill">
+			<li class="nav-item">
+				<a class="nav-link active" role="tab" href="#login" data-toggle="tab">Log in</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" role="tab" href="#signup" data-toggle="tab">Sign up</a>
+			</li>
+		</ul>
+		<div class="tab-content" style="padding-top: 5px">
+			<div role="tabpanel" class="tab-pane active" id="login">
+					<%= render 'login' %>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="signup">
+					<%= render 'signup' %>
 			</div>
 		</div>
 	</div>
+</div>
