@@ -1,1 +1,29 @@
 @import "bootstrap";
+
+// home/index.html.erb styles
+.center-div {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.user-details {
+  > .username {
+    font-style: italic;
+  }
+}
+
+.follow-container {
+  color: gray;
+  > span {
+    display: block;
+  }
+}
+
+.post-card {
+  > .author {
+    color: blue;
+    display: inline-block;
+    float: left;
+  }
+}
