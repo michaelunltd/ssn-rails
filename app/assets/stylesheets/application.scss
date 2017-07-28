@@ -4,7 +4,7 @@
 .center-div {
   text-align: center;
   margin: auto;
-  width: 40%;
+  width: 80%;
 }
 
 .user-details {
@@ -15,15 +15,19 @@
 
 .follow-container {
   color: gray;
-  > span {
-    display: block;
-  }
 }
 
-.post-card {
-  > .author {
-    color: blue;
-    display: inline-block;
-    float: left;
-  }
+// .post-card {
+//   background-color: white;
+//   margin-top: 2px;
+//   margin-bottom: 2px;
+//   > .author {
+//     color: blue;
+//     display: inline-block;
+//   }
+// }
+
+.card {
+  text-align: left;
+  margin-bottom: 10px;
 }
